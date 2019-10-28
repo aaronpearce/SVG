@@ -149,7 +149,7 @@ extension CGPath {
     return attributes["d"].flatMap(CGPath.svg_fromPath)
   }
 
-  static func svg_fromPath(string d: String) -> CGPath {
+  static public func svg_fromPath(string d: String) -> CGPath {
     let scanner = Scanner.svg_scanner(string: d)
     let instructionSet = CharacterSet(charactersIn: "ACHLMQSTVZachlmqstvz")
 
